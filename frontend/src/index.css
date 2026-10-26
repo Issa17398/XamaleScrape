@@ -1,0 +1,145 @@
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Outfit', 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Charte graphique officielle XAMALE */
+  --xamale-navy: #0a1e4a;
+  --xamale-navy-hover: #123875;
+  --xamale-navy-dark: #06122d;
+  --xamale-navy-subtle: #eef3fc;
+  --xamale-navy-border: #cbd8ef;
+
+  --xamale-gold: #d4af37;
+  --xamale-gold-hover: #b89528;
+  --xamale-gold-light: #fef9e8;
+  --xamale-gold-border: #f3db8b;
+  --xamale-gold-glow: rgba(212, 175, 55, 0.35);
+
+  --xamale-navy-gradient: linear-gradient(135deg, #0a1e4a 0%, #153e7f 100%);
+  --xamale-gold-gradient: linear-gradient(135deg, #d4af37 0%, #f59e0b 100%);
+
+  /* Palette de fond et cartes */
+  --bg-page: #f5f7fc;
+  --bg-card: #ffffff;
+  --bg-input: #f8fafc;
+  --bg-hover: #f1f5f9;
+  --bg-active-pill: #0a1e4a;
+
+  /* Bordures */
+  --border-subtle: #e2e8f0;
+  --border-focus: #0a1e4a;
+  --border-card: #e2e8f0;
+
+  /* Couleurs primaires et accents */
+  --primary: #0a1e4a;
+  --primary-hover: #123875;
+  --primary-light: #eef3fc;
+  --primary-border: #cbd8ef;
+  --accent-gold: #d4af37;
+
+  /* Textes */
+  --text-primary: #0a192f;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+
+  /* Statuts */
+  --status-success: #059669;
+  --status-success-bg: #d1fae5;
+  --status-warning: #d97706;
+  --status-warning-bg: #fef3c7;
+  --status-danger: #dc2626;
+  --status-danger-bg: #fee2e2;
+
+  /* Ombres */
+  --shadow-sm: 0 1px 3px 0 rgba(10, 30, 74, 0.04);
+  --shadow-md: 0 4px 8px -1px rgba(10, 30, 74, 0.06), 0 2px 4px -2px rgba(10, 30, 74, 0.04);
+  --shadow-card: 0 12px 30px -5px rgba(10, 30, 74, 0.06), 0 8px 12px -6px rgba(10, 30, 74, 0.04);
+  --shadow-btn: 0 6px 18px 0 rgba(10, 30, 74, 0.28);
+  --shadow-gold: 0 6px 20px 0 rgba(212, 175, 55, 0.28);
+
+  /* Rayons */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 26px;
+  --radius-full: 9999px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  line-height: 1.5;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: 
+    radial-gradient(circle at 10% 0%, rgba(10, 30, 74, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 90% 0%, rgba(212, 175, 55, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(10, 30, 74, 0.03) 0%, transparent 40%),
+    linear-gradient(180deg, #f8fafd 0%, #eff3f9 100%);
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem 1.5rem 3rem;
+}
+
+#root {
+  width: 100%;
+  max-width: 1220px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+/* Typographie */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.6; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.fade-in {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+/* Barre de défilement */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

@@ -1,0 +1,44 @@
+# Dépendances Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environnements virtuels Python
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# Fichiers d'environnement et secrets
+.env
+.env.local
+.env.*.local
+
+# Builds Frontend
+frontend/dist/
+frontend/dist-ssr/
+
+# Builds Backend
+backend/dist/
+
+# Fichiers de stockage temporaire (PDFs, JSON générés)
+storage/*
+!storage/.gitkeep
+
+# Logs
+*.log
+logs/
+
+# Systèmes d'exploitation & IDEs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
